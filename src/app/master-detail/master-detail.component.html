@@ -1,0 +1,11 @@
+<h2>Master View</h2>
+
+<ul class="masters">
+  <li *ngFor="let master of masters"
+    [class.selected]="master === selectedMaster"
+    (click)="onSelect(master)">
+    <span class="badge">{{master.id}}</span> {{master.name}}
+  </li>
+</ul>
+
+<app-master [master]="selectedMaster"></app-master>
